@@ -1,14 +1,10 @@
-Here’s your full **`README.md`** — clean, structured, and ready to drop into your repo 👇
 
----
 
-````markdown
-# 🎙️ Hinglish Voice Q&A Assistant
+###  Hinglish KISSAN Voice Q&A Assistant
 
 An end-to-end **voice-based Hindi + Hinglish Question Answering** system powered by **OpenAI Whisper**, **FastAPI**, **Streamlit**, and **Pinecone** Vector Database.  
 Ask your question in Hindi or Hinglish via voice — get instant transcription, relevant answers, and an audio response.
 
----
 
 ## 🚀 Features
 - 🎧 Voice input (mic or upload)
@@ -18,10 +14,10 @@ Ask your question in Hindi or Hinglish via voice — get instant transcription, 
 - ⚙️ FastAPI backend + Streamlit frontend
 - 🌐 Supports Hindi and Hinglish
 
----
+
 
 ## ⚙️ Installation Guide
-
+###### must needed
 ### 1️⃣ Install FFmpeg
 Required for audio conversion and processing.
 
@@ -79,14 +75,20 @@ If you don’t have one, create `requirements.txt`:
 ```txt
 fastapi
 uvicorn
-streamlit
-streamlit-mic-recorder
-requests
-openai-whisper
-pinecone-client
+git+https://github.com/openai/whisper.git
+streamlit                     
+streamlit-audiorecorder       
+streamlit-javascript          
+streamlit_mic_recorder 
+soundfile
+pydub
+indic-transliteration
+sentence-transformers
+pinecone
 gtts
 python-dotenv
-ffmpeg-python
+python-multipart
+requests
 ```
 
 ---
