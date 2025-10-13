@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+git+https://github.com/openai/whisper.git
+streamlit                     
+streamlit-audiorecorder       
+streamlit-javascript          
+streamlit_mic_recorder 
+soundfile
+pydub
+indic-transliteration
+sentence-transformers
+pinecone
+gtts
+python-dotenv
+python-multipart
+requests
