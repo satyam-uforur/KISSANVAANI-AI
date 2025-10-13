@@ -212,9 +212,7 @@ streamlit run app.py
 
 **Satyam Tiwari**
 Voice-based AI Assistant • Whisper + Pinecone + Streamlit
+
 🚀 Made with ❤️ for Hindi + Hinglish learners and developers.
 
 
-
-Would you like me to append a **sample Pinecone initialization + vector insertion code snippet** (for your `main.py` or a separate setup script)? That would make it fully reproducible.
-```
