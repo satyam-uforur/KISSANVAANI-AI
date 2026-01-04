@@ -1,20 +1,64 @@
+# 🌾 KissanVaani AI – Hindi / Hinglish Voice Farming Assistant
+
+KissanVaani AI is an end‑to‑end **voice-based Question Answering system for Indian farmers**, supporting **Hindi + Hinglish**.  
+Ask your farming questions by voice, get **Hinglish transcription**, **retrieved answers from Pinecone**, and **bilingual (English + Hindi) audio replies**.
+
+Built with:
+
+- 🎧 **OpenAI Whisper (local)** – Speech‑to‑Text  
+- 🧠 **SentenceTransformers + Pinecone** – Semantic search  
+- 🖥 **FastAPI** – Backend API  
+- 🌐 **Streamlit** – Modern web UI  
+- 🔊 **gTTS + googletrans** – Text‑to‑Speech in English and Hindi  
 
 
-###  Hinglish KISSAN Voice Q&A Assistant
-
-An end-to-end **voice-based Hindi + Hinglish Question Answering** system powered by **OpenAI Whisper**, **FastAPI**, **Streamlit**, and **Pinecone** Vector Database.  
-Ask your question in Hindi or Hinglish via voice — get instant transcription, relevant answers, and an audio response.
-
+---
 
 ## 🚀 Features
-- 🎧 Voice input (mic or upload)
-- 🧠 Speech-to-text using Whisper
-- 🔍 Semantic search using Pinecone
-- 💬 Text and audio responses
-- ⚙️ FastAPI backend + Streamlit frontend
-- 🌐 Supports Hindi and Hinglish
 
+- 🎙 **Voice Input**
+  - Record from mic (browser) or upload audio (`.wav`, `.mp3`, `.webm`, `.opus`).
+- 🧠 **Speech‑to‑Text with Whisper**
+  - Uses Whisper **medium** model.
+  - Forces transcription into **Roman script (“Hinglish”)** for easier downstream processing.
+- 🔍 **Semantic Retrieval with Pinecone**
+  - Converts text to embeddings (MiniLM).
+  - Queries Pinecone index (`kissanai`) for top farming answers.
+  - Supports simple **query expansion** (e.g., `seb` → `apple`).
+- 💬 **Bilingual Answers**
+  - Retrieves answer text (English).
+  - Automatically translates to **Hindi** using `googletrans`.
+- 🔊 **Audio Responses**
+  - Generates **English + Hindi TTS** using `gTTS`.
+  - Frontend plays the generated MP3 files directly.
+- 🌐 **Modern UI**
+  - Clean Streamlit app with **day / night theme**.
+  - UI language: English / Hindi / Hinglish.
+  - Hero section with dynamic greeting for farmers (IST time‑based).
 
+---
+
+## 🧱 Tech Stack
+
+- **Backend**
+  - FastAPI
+  - Whisper (`medium` model)
+  - SentenceTransformers (`all-MiniLM-L6-v2`)
+  - Pinecone Vector Database
+  - googletrans (EN → HI translation)
+  - gTTS (Text → MP3)
+  - indic‑transliteration (Hindi ↔ Hinglish normalization)
+
+- **Frontend**
+  - Streamlit
+  - `streamlit-mic-recorder` for in‑browser audio recording
+
+- **Infra / Tools**
+  - FFmpeg (audio processing)
+  - Python 3.9+  
+  - (Optional) CUDA GPU for faster Whisper inference
+
+---
 
 ## ⚙️ Installation Guide
 ###### must needed
@@ -208,10 +252,13 @@ streamlit run app.py
 ```
 
 
- 👨‍💻 Author
 
+👨‍💻 Authors
 **Satyam Tiwari**
-Voice-based AI Assistant • Whisper + Pinecone + Streamlit
+**Ayush Kale**
+
+✨ KissanVaani AI is built with a focus on Indian farmers,
+bringing LLMs + Retrieval + Voice together for practical, local‑language support.
 
 🚀 Made with ❤️ for Hindi + Hinglish learners and developers.
 
