@@ -255,7 +255,7 @@ streamlit run app.py
 
 👨‍💻 Authors
 **Satyam Tiwari**
-**Ayush Kale**
+& **Ayush Kale**
 
 ✨ KissanVaani AI is built with a focus on Indian farmers,
 bringing LLMs + Retrieval + Voice together for practical, local‑language support.
